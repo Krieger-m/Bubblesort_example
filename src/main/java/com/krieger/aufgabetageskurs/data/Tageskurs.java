@@ -161,12 +161,12 @@ public class Tageskurs {
         Tageskurs kurs1_2 = tageskurse2[0];
         Tageskurs kurs2_2 = tageskurse2[tageskurse2.length - 1];
 
-        System.out.print("\t\t\t/ Vergleich erster mit letztem Tageskurs: "+ String.valueOf(vergleich2.vergleiche2(kurs1_2, kurs2_2)));
+        System.out.println("\t\t\t/ Vergleich erster mit letztem Tageskurs: "+ String.valueOf(vergleich2.vergleiche2(kurs1_2, kurs2_2)));
 
-        System.out.print("\t\t\t/ Vergleich letzter mit erster Tageskurs: "+ String.valueOf(vergleich2.vergleiche2(kurs2_2, kurs1_2)));
+        System.out.println("\t\t\t/ Vergleich letzter mit erster Tageskurs: "+ String.valueOf(vergleich2.vergleiche2(kurs2_2, kurs1_2)));
 
         Tageskurs kursGleich_2 = new Tageskurs(new Date(2024 - 1900, 3, 18), 105.0, 15150.0, 0.01, 0.005);
-        System.out.print("\t\t\t/ Vergleich zweiter mit einem gleichen Aktienkurs: " + String.valueOf(vergleich2.vergleiche2(tageskurse2[1], kursGleich_2)));
+        System.out.println("\t\t\t/ Vergleich zweiter mit einem gleichen Aktienkurs: " + String.valueOf(vergleich2.vergleiche2(tageskurse2[1], kursGleich_2)));
     }
 
 
