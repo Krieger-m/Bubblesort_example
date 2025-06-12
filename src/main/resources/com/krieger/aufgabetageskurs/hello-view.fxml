@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.krieger.aufgabetageskurs.ctrl.HelloController">
+<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.krieger.aufgabetageskurs.ctrl.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+   <children>
+      <SplitPane dividerPositions="0.6284916201117319" orientation="VERTICAL" prefHeight="298.0" prefWidth="560.0">
+        <items>
+          <AnchorPane prefHeight="250.0" prefWidth="600.0">
+               <children>
+                  <TableView prefHeight="176.0" prefWidth="558.0">
+                    <columns>
+                      <TableColumn fx:id="col_aktienkurs" prefWidth="130.0" text="Aktienkurs" />
+                      <TableColumn prefWidth="151.0" text="DAX Wert" />
+                        <TableColumn prefWidth="137.0" text="\% Aktie" />
+                        <TableColumn prefWidth="138.0" text="\% DAX" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane prefHeight="250.0" prefWidth="600.0" />
+        </items>
+      </SplitPane>
+   </children>
 </VBox>
