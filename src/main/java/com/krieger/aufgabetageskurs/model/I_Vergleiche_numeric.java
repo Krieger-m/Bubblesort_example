@@ -39,5 +39,17 @@ public interface I_Vergleiche_numeric {
             )
     };
 
+    static void sortieren2() {
+        for (int i = 0; i < tageskurse2.length - 1; i++) {
+            for (int j = 0; j < tageskurse2.length - 1 - i; j++) {
+                if (vergleich2.vergleiche2(tageskurse2[j], tageskurse2[j + 1]) > 0) {
+                    Tageskurs temp = tageskurse2[j];
+                    tageskurse2[j] = tageskurse2[j + 1];
+                    tageskurse2[j + 1] = temp;
+                }
+            }
+        }
+    }
+
     int vergleiche2(Tageskurs a, Tageskurs b);
 }
